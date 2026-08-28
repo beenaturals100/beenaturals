@@ -1,5 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
+declare global {
+  interface Window {
+    fbq?: any;
+  }
+}
+
+
 export interface Product {
   id: string;
   nameKa: string;
@@ -100,8 +107,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return [...prevCart, { product, quantity: 1 }];
     });
 
-    if (typeof window !== "undefined" && (window as any).fbq) {
-      (window as any).fbq("track", "AddToCart");
+    if (window.fbq) {
+      window.fbq("track", "AddToCart");
     }
   };
 
@@ -137,8 +144,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return [...prevCart, { product, quantity: 1 }];
     });
 
-    if (typeof window !== "undefined" && (window as any).fbq) {
-      (window as any).fbq("track", "AddToCart");
+    if (window.fbq) {
+      window.fbq("track", "AddToCart");
     }
 
     setIsCheckoutOpen(true);

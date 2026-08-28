@@ -1,4 +1,11 @@
 import React, { useEffect, useState } from "react";
+
+declare global {
+  interface Window {
+    fbq?: any;
+  }
+}
+
 import { CartProvider, useCart } from "./context/CartContext";
 import { Header } from "./components/Header";
 import { ProductCatalog } from "./components/ProductCatalog";
@@ -78,11 +85,12 @@ const AppContent: React.FC = () => {
         setSuccessTrackingCode(trackingCode);
 
         // Trigger Meta Pixel Purchase event
-        if (typeof window !== "undefined" && (window as any).fbq) {
-          (window as any).fbq("track", "Purchase", {
+        if (window.fbq) {
+          window.fbq("track", "Purchase", {
             value: orderData.total,
             currency: "GEL",
           });
+          console.log("FB Purchase Fired");
         }
 
         localStorage.removeItem("beenaturals_pending_order");
@@ -112,11 +120,12 @@ const AppContent: React.FC = () => {
     setIsCashSuccessOpen(true);
 
     // Trigger Meta Pixel Purchase event
-    if (typeof window !== "undefined" && (window as any).fbq) {
-      (window as any).fbq("track", "Purchase", {
+    if (window.fbq) {
+      window.fbq("track", "Purchase", {
         value: orderTotal,
         currency: "GEL",
       });
+      console.log("FB Purchase Fired");
     }
   };
 
