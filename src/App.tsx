@@ -86,8 +86,9 @@ const AppContent: React.FC = () => {
 
         // Trigger Meta Pixel Purchase event
         if (window.fbq) {
+          const purchaseValue = Number(orderData?.total) || 0;
           window.fbq("track", "Purchase", {
-            value: Number(orderData.total),
+            value: purchaseValue,
             currency: "GEL",
           });
           console.log("FB Purchase Fired");
@@ -121,8 +122,9 @@ const AppContent: React.FC = () => {
 
     // Trigger Meta Pixel Purchase event
     if (window.fbq) {
+      const purchaseValue = Number(orderTotal) || 0;
       window.fbq("track", "Purchase", {
-        value: Number(orderTotal),
+        value: purchaseValue,
         currency: "GEL",
       });
       console.log("FB Purchase Fired");
