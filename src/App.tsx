@@ -72,7 +72,10 @@ const AppContent: React.FC = () => {
               await fetch("/api/resend", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(orderData),
+                body: JSON.stringify({
+                  ...orderData,
+                  trackingCode: trackingCode
+                }),
               });
             } else {
               console.log("Webhook already processed order. Skipped duplicate client-side email trigger.");

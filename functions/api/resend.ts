@@ -26,7 +26,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       );
     }
 
-    const { orderId, customer, items, subtotal, total, paymentMethod } = data;
+    const { orderId, customer, items, subtotal, total, paymentMethod, trackingCode } = data;
+    const trackingDisplay = trackingCode ? `#${trackingCode}` : `#${orderId.slice(-6)}`;
 
     // Build items HTML list
     const itemsHtml = items
@@ -54,7 +55,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         <!-- Header -->
         <div style="background-color: #d97706; padding: 24px; text-align: center;">
           <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: bold;">Beenaturals • ბინატურალს</h1>
-          <p style="color: #fef3c7; margin: 4px 0 0 0; font-size: 14px;">ახალი შეკვეთა მიღებულია! (#${orderId})</p>
+          <p style="color: #fef3c7; margin: 4px 0 0 0; font-size: 16px; font-weight: bold;">ახალი შეკვეთის კოდი: ${trackingDisplay}</p>
+          <p style="color: #fcd34d; margin: 2px 0 0 0; font-size: 12px;">შეკვეთის ID: ${orderId}</p>
         </div>
         
         <!-- Customer Info -->
@@ -136,7 +138,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       body: JSON.stringify({
         from: "Beenaturals Orders <onboarding@resend.dev>",
         to: [recipientEmail],
-        subject: `New Beenaturals Order #${orderId} - ${customer.firstName} ${customer.lastName}`,
+        subject: `New Beenaturals Order ${trackingDisplay} - ${customer.firstName} ${customer.lastName}`,
         html: htmlContent,
       }),
     });

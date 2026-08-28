@@ -135,6 +135,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     const results = queryData.results || [];
     const pageExists = results.length > 0;
 
+    let finalTrackingCode = "";
+
     if (pageExists) {
       const page = results[0];
       const pageId = page.id;
@@ -157,6 +159,22 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
           status: 200,
           headers: { "Content-Type": "application/json" },
         });
+      }
+
+      // Read existing tracking code
+      const trackingKey = Object.keys(props).find(
+        (k) =>
+          k.toLowerCase().replace(/[\s_-]/g, "") === "trackingcode" ||
+          k.toLowerCase().replace(/[\s_-]/g, "") === "tracking" ||
+          k.toLowerCase().replace(/[\s_-]/g, "") === "code"
+      );
+      if (trackingKey) {
+        const p = props[trackingKey];
+        if (p.type === "number") {
+          finalTrackingCode = String(p.number || "");
+        } else if (p.type === "rich_text") {
+          finalTrackingCode = p.rich_text?.[0]?.text?.content || "";
+        }
       }
 
       // 4. Update status to "გადახდილი" in Notion
@@ -197,7 +215,16 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       if (!notionRes.ok) {
         const errText = await notionRes.text();
         console.error(`Notion webhook logging failed: ${errText}`);
+      } else {
+        const notionData: any = await notionRes.json();
+        if (notionData.trackingCode) {
+          finalTrackingCode = String(notionData.trackingCode);
+        }
       }
+    }
+
+    if (!finalTrackingCode) {
+      finalTrackingCode = shopOrderId.slice(-6);
     }
 
     // 6. Trigger order confirmation email to merchant via Resend
@@ -205,7 +232,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     const resendRes = await fetch(`${origin}/api/resend`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(orderData),
+      body: JSON.stringify({
+        ...orderData,
+        trackingCode: finalTrackingCode
+      }),
     });
     if (!resendRes.ok) {
       const errText = await resendRes.text();

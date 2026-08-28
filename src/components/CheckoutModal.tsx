@@ -78,17 +78,21 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
         const notionData = await notionRes.json();
         if (!notionRes.ok) throw new Error(notionData.error || "Notion integration failed");
 
+        const trackingCode = notionData.trackingCode ? String(notionData.trackingCode) : String(Math.floor(1000 + Math.random() * 9000));
+
         const resendRes = await fetch("/api/resend", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(orderData),
+          body: JSON.stringify({
+            ...orderData,
+            trackingCode
+          }),
         });
         const resendData = await resendRes.json();
         if (!resendRes.ok) throw new Error(resendData.error || "Resend email failed");
 
         clearCart();
         setIsCheckoutOpen(false);
-        const trackingCode = notionData.trackingCode ? String(notionData.trackingCode) : String(Math.floor(1000 + Math.random() * 9000));
         onOrderSuccess(orderId, trackingCode, finalTotal);
       } catch (err: any) {
         console.error("Order processing error:", err);

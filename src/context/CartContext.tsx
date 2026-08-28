@@ -54,6 +54,26 @@ export const PRODUCTS: Product[] = [
     price: 35,
     image: "/honeycomb.jpg",
   },
+  {
+    id: "honey_jar_comb",
+    nameKa: "ფიჭიანი თაფლი ქილით",
+    nameEn: "Honeycomb with Honey in Jar",
+    descriptionKa: "ბუნებრივი ფიჭა და თაფლი 1.5-კილოგრამიან ქილაში",
+    descriptionEn: "Natural honeycomb and honey in 1.5 kg jar",
+    weight: "1.5 კგ",
+    price: 40,
+    image: "/honey_jar_comb.jpg",
+  },
+  {
+    id: "may_honey",
+    nameKa: "მაისის თაფლი",
+    nameEn: "May Honey",
+    descriptionKa: "მაისის თაფლი, მინდვრის ყვავილებისა და ცაცხვის თაფლი. უგემრიელესი და არომატული",
+    descriptionEn: "May honey, wildflowers and linden honey. Delicious and aromatic",
+    weight: "1.5 კგ",
+    price: 40,
+    image: "/may_honey.jpg",
+  },
 ];
 
 interface CartContextType {
