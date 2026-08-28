@@ -99,6 +99,10 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
       return [...prevCart, { product, quantity: 1 }];
     });
+
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq("track", "AddToCart");
+    }
   };
 
   const removeFromCart = (productId: string) => {
@@ -132,6 +136,11 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
       return [...prevCart, { product, quantity: 1 }];
     });
+
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq("track", "AddToCart");
+    }
+
     setIsCheckoutOpen(true);
   };
 

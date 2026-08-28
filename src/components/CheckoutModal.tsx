@@ -3,7 +3,7 @@ import { useCart } from "../context/CartContext";
 import { SHIPPING_ZONES } from "../data/deliveryMatrix";
 
 interface CheckoutModalProps {
-  onOrderSuccess: (orderId: string, trackingCode: string) => void;
+  onOrderSuccess: (orderId: string, trackingCode: string, orderTotal: number) => void;
 }
 
 export const CheckoutModal: React.FC<CheckoutModalProps> = ({
@@ -89,7 +89,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
         clearCart();
         setIsCheckoutOpen(false);
         const trackingCode = notionData.trackingCode ? String(notionData.trackingCode) : String(Math.floor(1000 + Math.random() * 9000));
-        onOrderSuccess(orderId, trackingCode);
+        onOrderSuccess(orderId, trackingCode, finalTotal);
       } catch (err: any) {
         console.error("Order processing error:", err);
         if (language === "ka") {
@@ -100,7 +100,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
         clearCart();
         setIsCheckoutOpen(false);
         const fallbackTrackingCode = String(Math.floor(1000 + Math.random() * 9000));
-        onOrderSuccess(orderId, fallbackTrackingCode);
+        onOrderSuccess(orderId, fallbackTrackingCode, finalTotal);
       } finally {
         setIsSubmitting(false);
       }

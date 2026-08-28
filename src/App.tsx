@@ -76,6 +76,15 @@ const AppContent: React.FC = () => {
         }
 
         setSuccessTrackingCode(trackingCode);
+
+        // Trigger Meta Pixel Purchase event
+        if (typeof window !== "undefined" && (window as any).fbq) {
+          (window as any).fbq("track", "Purchase", {
+            value: orderData.total,
+            currency: "GEL",
+          });
+        }
+
         localStorage.removeItem("beenaturals_pending_order");
         clearCart();
       } catch (err) {
@@ -97,10 +106,18 @@ const AppContent: React.FC = () => {
     window.history.pushState({ path: newUrl }, "", newUrl);
   };
 
-  const handleCashOrderSuccess = (orderId: string, trackingCode: string) => {
+  const handleCashOrderSuccess = (orderId: string, trackingCode: string, orderTotal: number) => {
     setSuccessOrderId(orderId);
     setSuccessTrackingCode(trackingCode);
     setIsCashSuccessOpen(true);
+
+    // Trigger Meta Pixel Purchase event
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq("track", "Purchase", {
+        value: orderTotal,
+        currency: "GEL",
+      });
+    }
   };
 
   return (
