@@ -2,33 +2,263 @@
 <html lang="ka">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- Preconnect for Google Fonts Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Favicon & Mobile Icons -->
     <link rel="icon" type="image/png" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beenaturals</title>
-    <meta name="description" content="პრემიუმ ხარისხის ნატურალური ქართული თაფლი პირდაპირ საფუტკრიდან. შეიძინეთ ველური ყვავილების თაფლი, დაკრისტალებული თაფლი და ნატურალური ფიჭა სწრაფი მიწოდებით." />
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1364844558609473');
-    fbq('track', 'PageView');
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <meta name="theme-color" content="#d97706" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- SEO: Title & Description Optimized for Top Google Rank in Tbilisi, Georgia -->
+    <title>ნატურალური თაფლი თბილისში | Beenaturals — 100% ნატურალური ქართული თაფლი და ფიჭა</title>
+    <meta name="description" content="Beenaturals — 100% ნატურალური ქართული მინდვრისა და ცაცხვის თაფლი და ქორფა ფიჭა კოდისწყაროდან (კასპის რაიონი). გაუცხელებელი, ნატურალური და სუფთა. სწრაფი მიწოდება თბილისსა და მთელ საქართველოში. შეუკვეთეთ WhatsApp-ით." />
+    <meta name="keywords" content="ნატურალური თაფლი თბილისი, თაფლის ყიდვა თბილისში, ქართული თაფლი, მინდვრის თაფლი, ცაცხვის თაფლი, კოდისწყარო თაფლი, ნატურალური ფიჭა თბილისი, მაისის თაფლი, honey in tbilisi, raw honey georgia, buy honey tbilisi delivery, натуральный мед тбилиси купить, доставка меда тбилиси" />
+    <meta name="author" content="Beenaturals" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://beenaturals.store/" />
+
+    <!-- Geo Targeting for Local Google SEO in Tbilisi, Georgia -->
+    <meta name="geo.region" content="GE-TB" />
+    <meta name="geo.placename" content="Tbilisi, Georgia" />
+    <meta name="geo.position" content="41.765958;44.770231" />
+    <meta name="ICBM" content="41.765958, 44.770231" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Beenaturals" />
+    <meta property="og:title" content="ნატურალური თაფლი თბილისში | Beenaturals — 100% ნატურალური ქართული თაფლი" />
+    <meta property="og:description" content="საოჯახო საფუტკრის 100% ნატურალური მინდვრისა და ცაცხვის თაფლი და ფიჭა კოდისწყაროდან. ყოველგვარი დანამატებისა და თერმული დამუშავების გარეშე. მიწოდება მთელ საქართველოში." />
+    <meta property="og:image" content="https://beenaturals.store/banner.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Beenaturals Raw Honey & Honeycomb Tbilisi" />
+    <meta property="og:url" content="https://beenaturals.store" />
+    <meta property="og:locale" content="ka_GE" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Beenaturals — ნატურალური ქართული თაფლი თბილისში" />
+    <meta name="twitter:description" content="100% ნატურალური ქართული მინდვრისა და ცაცხვის თაფლი და ფიჭა. სწრაფი მიწოდება." />
+    <meta name="twitter:image" content="https://beenaturals.store/banner.jpg" />
+
+    <!-- Structured Data: LocalBusiness / Store with NAP & Google Maps in Tbilisi -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "@id": "https://beenaturals.store/#store",
+      "name": "Beenaturals",
+      "alternateName": ["ბინატურალს", "Beenaturals Honey Tbilisi"],
+      "url": "https://beenaturals.store",
+      "telephone": "+995558057975",
+      "email": "beenaturals100@gmail.com",
+      "description": "Beenaturals — 100% ნატურალური ქართული მინდვრისა და ცაცხვის თაფლი და ქორფა ფიჭა კოდისწყაროს საოჯახო საფუტკრიდან.",
+      "image": "https://beenaturals.store/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "თბილისი",
+        "addressLocality": "Tbilisi",
+        "addressRegion": "Tbilisi",
+        "addressCountry": "GE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.7659589,
+        "longitude": 44.7702615
+      },
+      "hasMap": "https://maps.app.goo.gl/cmhMqw8WcULVZWL37",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61580550659968",
+        "https://www.instagram.com/beenaturals_ge",
+        "https://maps.app.goo.gl/cmhMqw8WcULVZWL37"
+      ],
+      "priceRange": "35 - 40 GEL",
+      "currenciesAccepted": "GEL",
+      "paymentAccepted": "Cash, Bank Transfer, POS Terminal, Credit Card",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Tbilisi",
+          "sameAs": "https://en.wikipedia.org/wiki/Tbilisi"
+        },
+        {
+          "@type": "Country",
+          "name": "Georgia",
+          "sameAs": "https://en.wikipedia.org/wiki/Georgia_(country)"
+        }
+      ],
+      "knowsAbout": [
+        "ნატურალური თაფლი",
+        "ქართული თაფლი",
+        "მინდვრის თაფლი",
+        "ცაცხვის თაფლი",
+        "მაისის თაფლი",
+        "ნატურალური ფიჭა",
+        "დინდგელი (პროპოლისი)",
+        "თაფლის მიწოდება თბილისში",
+        "Pure Raw Honey Tbilisi"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      }
+    }
     </script>
-    <!-- End Meta Pixel Code -->
+
+    <!-- Structured Data: Products -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Beenaturals Honey Products Tbilisi",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "name": "მაისის რჩეული თაფლი",
+          "description": "გაზაფხულის პირველი ნექტარი — 1.5 კგ",
+          "image": "/may-honey-premium-quality.png",
+          "brand": {"@type": "Brand", "name": "Beenaturals"},
+          "offers": { "@type": "Offer", "price": "40", "priceCurrency": "GEL", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Product",
+          "name": "ფიჭიანი თაფლი ქილით",
+          "description": "ბუნებრივი ფიჭა და ყვავილების თაფლი — 1.5 კგ",
+          "image": "/natural-raw-honey-with-honeycomb.png",
+          "brand": {"@type": "Brand", "name": "Beenaturals"},
+          "offers": { "@type": "Offer", "price": "40", "priceCurrency": "GEL", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Product",
+          "name": "მინდვრის ყვავილების თაფლი",
+          "description": "შიდა ქართლის მინდვრის ყვავილებისა და ცაცხვის ნატურალური თაფლი კოდისწყაროდან — 1.5 კგ",
+          "image": "/honey.jpg",
+          "brand": {"@type": "Brand", "name": "Beenaturals"},
+          "offers": { "@type": "Offer", "price": "35", "priceCurrency": "GEL", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Product",
+          "name": "დაკრისტალებული თაფლი",
+          "description": "კრემისებრი ბუნებრივად დაკრისტალებული თაფლი — 1.5 კგ",
+          "image": "/crystallized.jpg",
+          "brand": {"@type": "Brand", "name": "Beenaturals"},
+          "offers": { "@type": "Offer", "price": "35", "priceCurrency": "GEL", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Product",
+          "name": "ნატურალური მინდვრის ფიჭა",
+          "description": "პირდაპირ სკიდან ამოღებული ქორფა ფიჭა — 1 კგ",
+          "image": "/new-honeycomb-image-1-1.png",
+          "brand": {"@type": "Brand", "name": "Beenaturals"},
+          "offers": { "@type": "Offer", "price": "35", "priceCurrency": "GEL", "availability": "https://schema.org/InStock" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: WebSite with Search Potential -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Beenaturals",
+      "url": "https://beenaturals.store",
+      "inLanguage": ["ka", "en", "ru"]
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList for Enhanced Google Navigation Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "მთავარი",
+          "item": "https://beenaturals.store/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "კატალოგი",
+          "item": "https://beenaturals.store/#catalog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ჩვენი გზა",
+          "item": "https://beenaturals.store/#journey"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "გალერეა",
+          "item": "https://beenaturals.store/#gallery"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "კონტაქტი",
+          "item": "https://beenaturals.store/#contact"
+        }
+      ]
+    }
+    </script>
+  
+    <!-- Structured Data: FAQPage for Google Local Search Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "როგორ შემიძლია ნატურალური თაფლის შეკვეთა თბილისში მიწოდებით?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beenaturals-ის ნატურალური თაფლისა და ფიჭის შეკვეთა შეგიძლიათ პირდაპირ WhatsApp-ით (+995 558 05 79 75) ან Facebook Messenger-ით. საკურიერო მიწოდება ხორციელდება თბილისის ნებისმიერ უბანში და მთელ საქართველოში."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "რით გამოირჩევა Beenaturals-ის ნატურალური თაფლი?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ჩვენი თაფლი მოპოვებულია შიდა ქართლში, კასპის რაიონის სოფელ კოდისწყაროში (740 მ). ის არის 100% ნატურალური, ყოველგვარი შაქრისა და ხელოვნური დანამატების გარეშე, გაუცხელებელი და მდიდარი ცოცხალი ფერმენტებით."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "როგორ ხდება ანგარიშსწორება თბილისში მიწოდებისას?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ანგარიშსწორება შეგიძლიათ განახორციელოთ კურიერთან საბანკო ბარათით POS ტერმინალზე, საბანკო ანგარიშზე პირდაპირი გადარიცხვით ან ნაღდი ფულით შეკვეთის ჩაბარებისას."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "რა სახეობის ნატურალური თაფლი გაქვთ ხელმისაწვდომი?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ჩვენს კატალოგშია: მაისის რჩეული თაფლი, შიდა ქართლის მინდვრის ყვავილების თაფლი, ფიჭიანი თაფლი ქილით, ნატურალური დაკრისტალებული კრემ-თაფლი და ახალი ქორფა მინდვრის ფიჭა."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
-    <!-- Meta Pixel Code (noscript) -->
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1364844558609473&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code (noscript) -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

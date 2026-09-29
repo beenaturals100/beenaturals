@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://beenaturals.store/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://beenaturals.store/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beenaturals.store/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://beenaturals.store/?lang=ru"/>
+  </url>
+</urlset>

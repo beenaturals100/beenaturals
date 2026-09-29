@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beenaturals.store/sitemap.xml
