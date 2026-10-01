@@ -216,6 +216,20 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                     )}
                   </p>
                 </div>
+
+                <div className="p-3.5 rounded-2xl border border-stone-200/90 bg-white shadow-2xs">
+                  <h4 className="font-bold text-stone-900 mb-1 text-xs sm:text-sm flex items-center gap-1.5">
+                    <span className="text-amber-600">07.</span>
+                    {t("ქუქი-ფაილები და ანალიტიკა (Google Ads)", "Cookies & Analytics (Google Ads)", "Файлы cookie и аналитика (Google Ads)")}
+                  </h4>
+                  <p className="text-stone-600 text-xs leading-relaxed">
+                    {t(
+                      "ჩვენ ვიყენებთ Google Ads-ის თვალყურის დევნების ტეგს (gtag.js) ვებგვერდის ტრაფიკის ანალიზისა და სარეკლამო კამპანიების ეფექტურობის შესაფასებლად. Google-მა შეიძლება განათავსოს ქუქი-ფაილები (cookies) თქვენს ბრაუზერში, რათა აანალიზოს ვებგვერდის მონახულება და სარეკლამო კონვერსიები. ეს მონაცემები მუშავდება Google-ის კონფიდენციალურობის პოლიტიკის შესაბამისად (https://policies.google.com/privacy). თქვენ შეგიძლიათ მართოთ ან გამორთოთ ქუქი-ფაილები ბრაუზერის პარამეტრების მეშვეობით, ან გამოიყენოთ Google Ads-ის პერსონალიზაციის გამორთვის გვერდი: https://adssettings.google.com.",
+                      "We use the Google Ads tracking tag (gtag.js) to analyze website traffic and measure advertising campaign performance. Google may place cookies in your browser to track site visits and ad conversions. This data is processed in accordance with Google's Privacy Policy (https://policies.google.com/privacy). You can manage or disable cookies through your browser settings, or opt out of Google Ads personalization at https://adssettings.google.com.",
+                      "Мы используем тег отслеживания Google Ads (gtag.js) для анализа трафика сайта и оценки эффективности рекламных кампаний. Google может размещать файлы cookie в вашем браузере для отслеживания посещений и рекламных конверсий. Эти данные обрабатываются в соответствии с Политикой конфиденциальности Google (https://policies.google.com/privacy). Вы можете управлять или отключить cookie через настройки браузера, а также отказаться от персонализации рекламы Google на странице https://adssettings.google.com."
+                    )}
+                  </p>
+                </div>
               </div>
             </div>
           ) : (
@@ -315,6 +329,20 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                       "ამ ვებგვერდზე განთავსებული ყველა ფოტომასალა, ვიდეო, ბრენდინგი და ტექსტური შინაარსი ეკუთვნის ექსკლუზიურად საიტის ოპერატორს.",
                       "All images, branding, and content on this website belong exclusively to the site operator.",
                       "Все изображения, элементы брендинга и материалы на этом веб-сайте принадлежат исключительно владельцу сайта."
+                    )}
+                  </p>
+                </div>
+
+                <div className="p-3.5 rounded-2xl border border-stone-200/90 bg-white shadow-2xs">
+                  <h4 className="font-bold text-stone-900 mb-1 text-xs sm:text-sm flex items-center gap-1.5">
+                    <span className="text-amber-600">07.</span>
+                    {t("ქუქი-ფაილები და მესამე მხარის სერვისები", "Cookies & Third-Party Services", "Файлы cookie и сторонние сервисы")}
+                  </h4>
+                  <p className="text-stone-600 text-xs leading-relaxed">
+                    {t(
+                      "ეს ვებგვერდი იყენებს Google Ads-ის ტეგს (gtag.js) ვიზიტორების აქტივობის ანალიზისა და სარეკლამო ეფექტურობის გასაზომად. ვებგვერდის მონახულებით თქვენ ეთანხმებით Google-ის ქუქი-ფაილების გამოყენებას ტრაფიკის ანალიზისა და კონვერსიების თვალყურის დევნის მიზნით. ამ ქუქი-ფაილების მართვა ან გამორთვა შეგიძლიათ თქვენი ბრაუზერის პარამეტრებიდან. დეტალური ინფორმაციისთვის იხილეთ ჩვენი კონფიდენციალურობის პოლიტიკა.",
+                      "This website uses the Google Ads tag (gtag.js) to analyze visitor activity and measure advertising effectiveness. By using this website, you consent to the use of Google cookies for traffic analysis and conversion tracking. You may manage or disable these cookies through your browser settings. For more details, please see our Privacy Policy.",
+                      "Этот сайт использует тег Google Ads (gtag.js) для анализа активности посетителей и измерения эффективности рекламы. Используя этот сайт, вы соглашаетесь на использование cookie-файлов Google для анализа трафика и отслеживания конверсий. Вы можете управлять или отключить эти cookie через настройки браузера. Подробности — в нашей Политике конфиденциальности."
                     )}
                   </p>
                 </div>
