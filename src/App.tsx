@@ -318,7 +318,7 @@ const AppContent: React.FC = () => {
                 step: "03",
                 icon: "🍯",
                 title: t("ხელით მოპოვება", "Hand Harvesting", "Ручной отжим"),
-                desc: t("0% გაცხელება, 0% შაქარი — ვინარჩუნებთ ყველა ცოცხალ სამკურნალო თვისებას.", "Zero heating, zero processing — preserving pure raw medicinal qualities.", "Без нагрева и пастеризации — сохраняются все энзимы."),
+                desc: t("0% შაქარი — ვინარჩუნებთ ყველა ცოცხალ სამკურნალო თვისებას.", "Zero added sugar — preserving pure raw medicinal qualities.", "0% сахара — сохраняются все живые целебные свойства."),
               },
               {
                 step: "04",
