@@ -6,7 +6,6 @@ import {
   PHONE_DISPLAY,
   FACEBOOK_LINK,
   INSTAGRAM_LINK,
-  GOOGLE_MAPS_LINK,
 } from "./data/products";
 import { Header } from "./components/Header";
 import { ProductCatalog } from "./components/ProductCatalog";
@@ -81,21 +80,21 @@ const AppContent: React.FC = () => {
               <h1 className="text-[1.85rem] sm:text-5xl lg:text-[3.4rem] font-serif font-black text-stone-900 leading-[1.15] mb-4 sm:mb-6 tracking-tight">
                 {tNode(
                   <>
-                    ნატურალური თაფლი{" "}
+                    ნატურალური{" "}
                     <span className="bg-gradient-to-r from-amber-600 via-honey-600 to-amber-700 bg-clip-text text-transparent">
-                      ბუნებისგან
+                      თაფლი
                     </span>
                   </>,
                   <>
-                    Pure Honey{" "}
+                    Pure{" "}
                     <span className="bg-gradient-to-r from-amber-600 via-honey-600 to-amber-700 bg-clip-text text-transparent">
-                      From Nature
+                      Honey
                     </span>
                   </>,
                   <>
-                    Настоящий{" "}
+                    Натуральный{" "}
                     <span className="bg-gradient-to-r from-amber-600 via-honey-600 to-amber-700 bg-clip-text text-transparent">
-                      от природы
+                      мёд
                     </span>
                   </>
                 )}
@@ -395,7 +394,7 @@ const AppContent: React.FC = () => {
 
 
       {/* =====================================================================
-          8. CONTACT & GOOGLE MAPS EMBED SECTION
+          8. CONTACT SECTION
       ====================================================================== */}
       <section id="contact" className="pt-10 sm:pt-16 pb-12 sm:pb-24 bg-[#faf7ef] border-t-2 border-amber-400/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -404,7 +403,7 @@ const AppContent: React.FC = () => {
             <div className="flex items-center justify-center gap-3 mb-2.5 sm:mb-3">
               <span className="w-8 sm:w-14 h-0.5 bg-amber-500 rounded-full inline-block"></span>
               <span className="inline-block text-amber-900 font-sans font-bold tracking-widest text-xs uppercase bg-amber-100/90 px-4 py-1.5 rounded-full border border-amber-300 shadow-xs">
-                {t("კონტაქტი & ლოკაცია", "Contact & Location", "Контакты и локация")}
+                {t("კონტაქტი", "Contact", "Контакты")}
               </span>
               <span className="w-8 sm:w-14 h-0.5 bg-amber-500 rounded-full inline-block"></span>
             </div>
@@ -413,147 +412,18 @@ const AppContent: React.FC = () => {
             </h2>
             <p className="text-stone-600 font-sans text-xs sm:text-base mt-1.5 max-w-xl mx-auto">
               {t(
-                "შეკვეთების მიღება და კონსულტაცია WhatsApp-სა და Messenger-ში. ასევე შეგიძლიათ გვესტუმროთ ან ისარგებლოთ მიწოდებით.",
-                "Orders and inquiries via WhatsApp and Messenger. Self-pickup and door-to-door delivery available.",
-                "Приём заказов и консультации через WhatsApp и Messenger. Также доступен самовывоз и доставка."
+                "შეკვეთების მიღება და კონსულტაცია WhatsApp-სა და Messenger-ში. სწრაფი მიწოდება მთელ საქართველოში.",
+                "Orders and inquiries via WhatsApp and Messenger. Fast delivery across Georgia.",
+                "Приём заказов и консультации через WhatsApp и Messenger. Быстрая доставка по всей Грузии."
               )}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
             
-            {/* Left side — Luxury Boutique Interactive Google Maps Presentation */}
-            <div className="lg:col-span-7 flex flex-col rounded-3xl overflow-hidden shadow-2xl border-2 border-amber-900/15 bg-stone-950 relative group">
-              
-              {/* Map Top Bar — Luxury Editorial Terminal Header */}
-              <div className="bg-[#1c1917] px-4 sm:px-5 py-3 border-b border-stone-800 flex items-center justify-between gap-3 text-white z-20">
-                <div className="flex items-center gap-2 sm:gap-2.5">
-                  <span className="relative flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                  </span>
-                  <span className="text-xs sm:text-sm font-serif font-black text-amber-300">
-                    Beenaturals Tbilisi
-                  </span>
-                  <span className="hidden sm:inline-block text-[11px] font-sans text-stone-400 border-l border-stone-700 pl-2.5">
-                    {t("ღიაა: 09:00 — 21:00", "Open: 09:00 — 21:00", "Открыто: 09:00 — 21:00")}
-                  </span>
-                </div>
-
-                <a
-                  href={GOOGLE_MAPS_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white text-[11px] font-sans font-bold transition-colors no-underline cursor-pointer border border-stone-700/80 shadow-xs shrink-0"
-                >
-                  <span>{t("Google Maps ↗", "Google Maps ↗", "В Google Maps ↗")}</span>
-                </a>
-              </div>
-
-              {/* Map Viewport Area */}
-              <div className="relative flex-grow w-full h-[270px] sm:h-full sm:min-h-[440px] bg-stone-900">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2751.151360051703!2d44.7702308!3d41.76595819999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6dfea1015fb92123%3A0x4fb7af32df2d1d1c!2z4YOc4YOQ4YOi4YOj4YOg4YOQ4YOa4YOj4YOg4YOYIOGDl-GDkOGDpOGDmuGDmCDhg5Hhg5jhg5zhg5Dhg6Lhg6Phg6Dhg5Dhg5rhg6Eg4oCiIEJlZW5hdHVyYWxz!5e1!3m2!1sen!2sge!4v1790712015323!5m2!1sen!2sge"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, display: "block" }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Beenaturals Google Maps Tbilisi"
-                  className="w-full h-full"
-                ></iframe>
-
-                {/* Floating Glassmorphic Location Badge — Hidden on small mobile to prevent covering the map */}
-                <div className="hidden sm:block absolute bottom-4 left-4 max-w-sm bg-stone-950/90 backdrop-blur-md p-3.5 rounded-2xl border border-amber-500/40 text-white shadow-2xl pointer-events-auto">
-                  <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-lg shrink-0">
-                      📍
-                    </div>
-                    <div className="flex-grow">
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <span className="text-xs font-serif font-black text-amber-300">
-                          Beenaturals · თბილისი
-                        </span>
-                        <span className="text-[10px] font-sans bg-amber-400/15 text-amber-300 px-1.5 py-0.5 rounded font-bold">
-                          41.766° N, 44.770° E
-                        </span>
-                      </div>
-                      <p className="text-[11px] text-stone-300 font-sans leading-relaxed">
-                        {t(
-                          "ნატურალური თაფლი და ფიჭა · ადგილზე გატანა & მიწოდება მთელ თბილისში",
-                          "Pure honey & comb · Self pick-up & door-to-door delivery in Tbilisi",
-                          "Натуральный мёд и соты · Самовывоз и быстрая доставка по Тбилиси"
-                        )}
-                      </p>
-                      <div className="mt-2 pt-2 border-t border-stone-800/80 flex items-center gap-3">
-                        <a
-                          href={GOOGLE_MAPS_LINK}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[11px] font-sans font-bold text-amber-300 hover:text-amber-200 transition-colors no-underline"
-                        >
-                          <span>🧭 {t("მარშრუტი", "Directions", "Маршрут")}</span>
-                        </a>
-                        <span className="text-stone-600 text-xs">·</span>
-                        <a
-                          href={`tel:${PHONE_NUMBER}`}
-                          className="inline-flex items-center gap-1 text-[11px] font-sans font-bold text-stone-300 hover:text-white transition-colors no-underline"
-                        >
-                          <span>📞 {PHONE_DISPLAY}</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Mobile Dedicated Location Bar — Docked cleanly below map on mobile */}
-              <div className="sm:hidden bg-[#1c1917] p-4 border-t border-stone-800 text-white">
-                <div className="flex items-center justify-between gap-2 mb-2">
-                  <div className="flex items-center gap-2">
-                    <span className="text-amber-400 text-base">📍</span>
-                    <span className="text-xs font-serif font-black text-amber-300">
-                      Beenaturals · თბილისი
-                    </span>
-                  </div>
-                  <span className="text-[10px] font-sans bg-amber-400/15 text-amber-300 px-2 py-0.5 rounded-full font-bold">
-                    41.766° N, 44.770° E
-                  </span>
-                </div>
-                <p className="text-[11px] text-stone-300 font-sans leading-relaxed mb-3">
-                  {t(
-                    "ნატურალური თაფლი და ფიჭა · ადგილზე გატანა & მიწოდება მთელ თბილისში",
-                    "Pure honey & comb · Self pick-up & door-to-door delivery in Tbilisi",
-                    "Натуральный мёд и соты · Самовывоз и быстрая доставка по Тбилиси"
-                  )}
-                </p>
-                <div className="flex items-center gap-2.5 pt-2 border-t border-stone-800">
-                  <a
-                    href={GOOGLE_MAPS_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 py-2 px-3 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-400/40 text-center text-xs font-sans font-bold no-underline"
-                  >
-                    🧭 {t("მარშრუტი", "Directions", "Маршрут")}
-                  </a>
-                  <a
-                    href={`tel:${PHONE_NUMBER}`}
-                    className="flex-1 py-2 px-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 text-center text-xs font-sans font-bold no-underline"
-                  >
-                    📞 {PHONE_DISPLAY}
-                  </a>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Right side — Direct Contact Channels & Socials */}
-            <div className="lg:col-span-5 flex flex-col justify-between gap-6">
-              
-              {/* Direct channels card */}
-              <div className="bg-white rounded-3xl p-6 sm:p-7 border border-amber-200/80 shadow-md">
+            {/* Direct channels card */}
+            <div className="bg-white rounded-3xl p-6 sm:p-7 border border-amber-200/80 shadow-md flex flex-col justify-between">
+              <div>
                 <h3 className="font-serif font-black text-xl text-stone-900 mb-5">
                   {t("სწრაფი კავშირი", "Direct Order Channels", "Прямая связь")}
                 </h3>
@@ -612,58 +482,55 @@ const AppContent: React.FC = () => {
                   </a>
                 </div>
               </div>
+            </div>
 
-              {/* Location & Socials card */}
-              <div className="bg-white rounded-3xl p-6 sm:p-7 border border-amber-200/80 shadow-md flex flex-col justify-between gap-4">
-                <div>
-                  <h4 className="font-serif font-bold text-stone-900 text-base mb-2">
-                    {t("სამუშაო საათები & ლოკაცია", "Working Hours & Location", "Часы работы и адрес")}
-                  </h4>
-                  <p className="text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
-                    📍 {t("თბილისი, საქართველო", "Tbilisi, Georgia", "Тбилиси, Грузия")}
-                    <br />
-                    🚚 {t("სწრაფი მიწოდება მთელ თბილისში (საბურთალო, ვაკე, დიღომი, გლდანი, ისანი და სხვ.)", "Fast delivery across all Tbilisi districts & Georgia", "Быстрая доставка по всем районам Тбилиси и Грузии")}
-                    <br />
-                    ⏰ {t("ორშაბათი – კვირა: 09:00 — 21:00", "Mon – Sun: 09:00 — 21:00", "Пн – Вс: 09:00 — 21:00")}
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-stone-100 flex items-center justify-between">
-                  <span className="text-xs text-stone-500 font-sans font-bold uppercase tracking-wider">
-                    {t("გამოგვყევით", "Follow Us", "Соцсети")}
-                  </span>
-                  <div className="flex items-center gap-2.5">
-                    <a
-                      href={FACEBOOK_LINK}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-xl bg-[#1877F2]/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white flex items-center justify-center transition-colors no-underline"
-                      aria-label="Facebook"
-                    >
-                      <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-                    </a>
-                    <a
-                      href={INSTAGRAM_LINK}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#F58529]/10 via-[#DD2A7B]/10 to-[#8134AF]/10 hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] text-[#DD2A7B] hover:text-white flex items-center justify-center transition-colors no-underline"
-                      aria-label="Instagram"
-                    >
-                      <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                    </a>
-                    <a
-                      href={WHATSAPP_LINK}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-xl bg-stone-900 hover:bg-black text-amber-300 border border-amber-500/40 flex items-center justify-center transition-colors no-underline shadow-xs"
-                      aria-label="WhatsApp"
-                    >
-                      <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    </a>
-                  </div>
-                </div>
+            {/* Location & Socials card */}
+            <div className="bg-white rounded-3xl p-6 sm:p-7 border border-amber-200/80 shadow-md flex flex-col justify-between gap-4">
+              <div>
+                <h4 className="font-serif font-bold text-stone-900 text-base mb-2">
+                  {t("ლოკაცია & მიწოდება", "Location & Delivery", "Локация и доставка")}
+                </h4>
+                <p className="text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
+                  📍 {t("თბილისი, საქართველო", "Tbilisi, Georgia", "Тбилиси, Грузия")}
+                  <br />
+                  🚚 {t("სწრაფი მიწოდება მთელ თბილისში (საბურთალო, ვაკე, დიღომი, გლდანი, ისანი და სხვ.)", "Fast delivery across all Tbilisi districts & Georgia", "Быстрая доставка по всем районам Тбилиси и Грузии")}
+                </p>
               </div>
 
+              <div className="pt-4 border-t border-stone-100 flex items-center justify-between">
+                <span className="text-xs text-stone-500 font-sans font-bold uppercase tracking-wider">
+                  {t("გამოგვყევით", "Follow Us", "Соцсети")}
+                </span>
+                <div className="flex items-center gap-2.5">
+                  <a
+                    href={FACEBOOK_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-xl bg-[#1877F2]/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white flex items-center justify-center transition-colors no-underline"
+                    aria-label="Facebook"
+                  >
+                    <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                  </a>
+                  <a
+                    href={INSTAGRAM_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#F58529]/10 via-[#DD2A7B]/10 to-[#8134AF]/10 hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] text-[#DD2A7B] hover:text-white flex items-center justify-center transition-colors no-underline"
+                    aria-label="Instagram"
+                  >
+                    <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                  </a>
+                  <a
+                    href={WHATSAPP_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-xl bg-stone-900 hover:bg-black text-amber-300 border border-amber-500/40 flex items-center justify-center transition-colors no-underline shadow-xs"
+                    aria-label="WhatsApp"
+                  >
+                    <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  </a>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -691,13 +558,7 @@ const AppContent: React.FC = () => {
                   </span>
                 </div>
               </div>
-              <p className="text-xs sm:text-sm text-stone-400 leading-relaxed max-w-sm mb-6">
-                {t(
-                  "100% ნატურალური მინდვრისა და ცაცხვის თაფლი კასპის რაიონ სოფელ კოდისწყაროდან. ხელით მოპოვებული, გაუცხელებელი და სუფთა. შეუკვეთეთ WhatsApp-ით ან Messenger-ით.",
-                  "100% pure raw wildflower & linden honey from Kodistskharo village, Kaspi district. Hand-harvested, unheated, direct from family apiary.",
-                  "100% натуральный мёд диких трав и липы из села Кодисцкаро, Каспский район. Собран вручную, без нагрева, прямо с пасеки."
-                )}
-              </p>
+
               
               <div className="flex items-center gap-3">
                 <a href={FACEBOOK_LINK} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-xl bg-stone-900 hover:bg-[#1877F2] text-stone-400 hover:text-white flex items-center justify-center transition-colors no-underline" aria-label="Facebook">

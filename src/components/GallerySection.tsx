@@ -101,11 +101,6 @@ export const GallerySection: React.FC = () => {
   const t = {
     badge: language === "ka" ? "ვიზუალური გალერეა" : language === "en" ? "Visual Gallery" : "Визуальная галерея",
     title: language === "ka" ? "რეალური კადრები ჩვენი საფუტკრიდან" : language === "en" ? "Raw Moments From Our Apiary" : "Реальные кадры с нашей пасеки",
-    subtitle: language === "ka"
-      ? "არანაირი ხელოვნური ილუსტრაციები — მხოლოდ ნამდვილი ქართული ფუტკარი, ხელით მოპოვებული ფიჭა და ცოცხალი თაფლი კოდისწყაროდან."
-      : language === "en"
-      ? "No artificial stock images — authentic Georgian bees, hand-harvested honeycomb, and raw pure honey from Kodistskharo."
-      : "Никаких искусственных стоковых картинок — только настоящие пчёлы, ручной сбор сот и живой мёд из Кодисцкаро.",
     all: language === "ka" ? "ყველა" : language === "en" ? "All" : "Все",
     videos: language === "ka" ? "ვიდეო კადრები (9:16)" : language === "en" ? "Videos (9:16)" : "Видео (9:16)",
     apiary: language === "ka" ? "საფუტკრე" : language === "en" ? "Apiary" : "Пасека",
@@ -251,9 +246,6 @@ export const GallerySection: React.FC = () => {
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-black text-stone-900 tracking-tight leading-tight">
             {t.title}
           </h2>
-          <p className="text-stone-600 font-sans text-xs sm:text-base mt-1.5 max-w-2xl leading-relaxed">
-            {t.subtitle}
-          </p>
         </div>
 
         {/* ===================================================================
