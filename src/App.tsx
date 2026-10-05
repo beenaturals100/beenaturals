@@ -104,9 +104,9 @@ const AppContent: React.FC = () => {
               {/* Selling Subtitle */}
               <p className="text-sm sm:text-lg text-stone-700 font-sans leading-relaxed max-w-xl mb-6 sm:mb-8">
                 {t(
-                  "Beenaturals-ის თაფლი — 100% სუფთა და ცოცხალი ვიტამინებით სავსე. ხელით მოპოვებული შიდა ქართლში, კასპის რაიონ სოფელ კოდისწყაროში, მინდვრის ველური ყვავილებისა და ცაცხვის ნექტრისგან, ყოველგვარი დანამატებისა და გაცხელების გარეშე.",
-                  "Beenaturals honey is pure, unheated, and overflowing with live enzymes. Hand-harvested in Kodistskharo, Shida Kartli from pristine wild meadow flora and fragrant linden with zero additives.",
-                  "Мёд Beenaturals — 100% сырой, натуральный и наполненный природными энзимами. Собран вручную в селе Кодисцкаро, Шида Картли, из нектара диких луговых трав и липы, без сахара и нагрева."
+                  "Beenaturals - 100% ნატურალური ფუტკრის პროდუქტები.",
+                  "Beenaturals - 100% Natural Bee Products.",
+                  "Beenaturals — 100% натуральные продукты пчеловодства."
                 )}
               </p>
 

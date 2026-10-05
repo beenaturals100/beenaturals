@@ -8,11 +8,6 @@ export const ProductCatalog: React.FC = () => {
   const t = {
     badge: language === "ka" ? "პოპულარული კოლექცია" : language === "en" ? "Popular Collection" : "Популярная коллекция",
     title: language === "ka" ? "ჩვენი პროდუქცია" : language === "en" ? "Artisanal Honey & Comb" : "Наша продукция",
-    subtitle: language === "ka"
-      ? "შეარჩიეთ თქვენი საყვარელი ნატურალური თაფლი და მეფუტკრეობის პროდუქტები. მაღალი ხარისხი და შეუდარებელი გემო პირდაპირ საფუტკრედან."
-      : language === "en"
-      ? "Choose your favorite raw honey and honeycomb. Pure artisanal quality and unforgettable natural flavor directly from our apiary."
-      : "Выберите натуральный грузинский мёд и продукты пчеловодства. Высочайшее качество и первозданный вкус прямо с пасеки.",
     allProducts: language === "ka" ? "ჩვენი გზა & წარმოება →" : language === "en" ? "Our Journey & Apiary →" : "Наш путь и пасека →",
     orderVia: language === "ka" ? "შეკვეთა:" : language === "en" ? "Order:" : "Заказ:",
     gel: "GEL",
@@ -44,9 +39,6 @@ export const ProductCatalog: React.FC = () => {
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-black text-stone-900 tracking-tight leading-tight">
             {t.title}
           </h2>
-          <p className="text-stone-600 font-sans text-xs sm:text-base max-w-2xl mt-1.5 leading-relaxed">
-            {t.subtitle}
-          </p>
         </div>
 
         <a
